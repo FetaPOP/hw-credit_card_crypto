@@ -7,7 +7,6 @@ module SubstitutionCipher
     #   document: String
     #   key: Fixnum (integer)
     # Returns: String
-
     
     # Notice : I learned this method from Reddit.  
     # https://www.reddit.com/r/ruby/comments/4ajwv8/is_there_a_better_way_to_caesar_cipher_then_this/
