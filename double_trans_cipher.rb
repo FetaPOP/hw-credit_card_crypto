@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module DoubleTranspositionCipher
   def self.encrypt(document, key)
     # TODO: FILL THIS IN!
@@ -12,10 +14,10 @@ module DoubleTranspositionCipher
 
     # 3. sort rows in predictibly random way using key as seed
     sorted = random_sort(sliced_plaintext, key, true)
-    
+
     # 4. sort columns of each row in predictibly random way
     # 5. return joined cyphertext
-    result = sorted.map { |row| random_sort(row, key, true).join('') }.join('')
+    sorted.map { |row| random_sort(row, key, true).join('') }.join('')
   end
 
   def self.decrypt(encrypted_document, key)
@@ -27,7 +29,7 @@ module DoubleTranspositionCipher
     sliced_ciphertext = padded_ciphertext.chars.each_slice(matrix_size).to_a
 
     sorted = random_sort(sliced_ciphertext, key, false)
-    
+
     # 4. sort columns of each row in predictibly random way
     # 5. return joined cyphertext
     result = sorted.map { |row| random_sort(row, key, false).join('') }.join('')

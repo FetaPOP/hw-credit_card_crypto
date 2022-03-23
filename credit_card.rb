@@ -4,6 +4,7 @@
 require_relative './luhn_validator'
 require 'json'
 require 'base64'
+require 'rbnacl'
 # I run openssl list -digest-algorithms in my terminal
 
 class CreditCard

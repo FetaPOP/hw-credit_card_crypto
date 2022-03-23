@@ -60,7 +60,6 @@ describe 'Test card info encryption' do
   describe 'Using ModernSymmetricCiphe cipher' do
     before do
       @key = ModernSymmetricCipher.generate_new_key
-
     end
 
     it 'should has key value' do
